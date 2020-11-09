@@ -1,7 +1,7 @@
 # covid19_toolkit
  Optimally select people for COVID19 testing. Can be employed on an organization level subject to a daily test budget.
  
-# Usage
+# Preparation
 You are required to create a "Solvers" directory to contain at least one solver. We recommend the free GLPK:
 http://guix.gnu.org/packages/glpk-4.65
 
@@ -10,6 +10,7 @@ The information about the organization is captured within the spreadsheet files 
 2) In the "Organization" sheet you are only obliged to the first 4 columns storing the details of the person. The rest of the columns you can add as you wish. These columns are the departments of the organization. Use binary indicator to associate each person (row) with the departments the person visits.
 3) In the "Risk" sheet you can add as many risk factors as you wish, and each person should have scores 0-5 for each one of the riskfactors you defined.
 
+# Usage
 You can either run:
 ```
 python COVID19-Toolkit.py
@@ -23,7 +24,7 @@ Once you run the software you need to:
 4) Use the checklist to mark the people that were actually tested (mark a V sign next to their names)
 5) (next day) Run the software again, the software will automatically *merge* the checklist and the main XLSX file of the previous day (creating a new XLSX file carrying the selected date) And then go to step (2).
 
-
-Assumption: all the results are negative.Since  if they were positive, a special protocol should be applied in the organization, which is beyond the scope of this software.
+# Assumptions
+1) all the results are negative. Since if they were positive, a special protocol should be applied in the organization, which is beyond the scope of this software.
 
 
