@@ -1,6 +1,8 @@
 # covid19_toolkit
  Optimally select people for COVID19 testing. Can be employed on an organization level subject to a daily test budget.
  
+![Screenshot of the software](HighLevel.PNG)
+ 
 # Preparation
 You are required to create a "Solvers" directory to contain at least one solver. We recommend the free GLPK:
 http://guix.gnu.org/packages/glpk-4.65
