@@ -1,0 +1,15 @@
+coeff_kind: custom
+coeff_vector:
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.6
+discount_kind: sigmoid
+discount_vector:
+- 0.5
+- 10.0

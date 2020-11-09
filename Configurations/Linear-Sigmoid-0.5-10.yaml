@@ -1,0 +1,5 @@
+coeff_kind: linear
+discount_kind: sigmoid
+discount_vector:
+- 0.5
+- 10.0

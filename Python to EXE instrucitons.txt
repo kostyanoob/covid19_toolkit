@@ -1,0 +1,39 @@
+# 0) Only if there is no virtual environment for our project, 
+#    create a slim virtual environment with the minimal 
+#    requirements for our application. (run in CMD prompt)
+python -m venv C:\Users\Kostya\AppData\Local\Programs\Python\covid_toolkit
+
+# 1) Activate the virtual environment (run in CMD prompt)
+C:\Users\Kostya\AppData\Local\Programs\Python\covid_toolkit\Scripts\activate.bat
+# 2) Install the required packages to the environment (run in CMD prompt within the project directory)
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# 3) If using Flask, make sure that it is set to debug=False in the main() function in the python code.
+
+############## OPTION 1 - A SINGLE EXE FILE - RUNS VERY SLOWLY!!! ##############
+# 4) Use pyinstaller to produce an EXE file 
+#    (run in CMD prompt within the project directory - change the VX.Y to a version name)
+pyinstaller COVID19-Toolkit.py --console --onefile --distpath .\Executable\VX.Y --workpath .\build --hidden-import=scipy.special.cython_special --hidden-import=jinja2.ext
+#    The above command should have incorporated the 
+#    Solvers, static, template folders into the executable, 
+#    but for some reason it didn't work. Hence we just copy 
+#    them manually in the next step next step:
+# 5) Copy the following directories to "Executable\VX.Y" :
+       Configurations
+       Solvers
+       Spreadsheets
+       static
+       template  
+# 4) Use pyinstaller to produce an EXE file 
+#    (run in CMD prompt within the project directory - change the VX.Y to a version name)      
+pyinstaller COVID19-Toolkit.py --console --onedir --distpath .\Executable\VX.Y --workpath .\build --add-data "Spreadsheets;Spreadsheets" --add-data "Configurations;Configurations" --add-data "Solvers;Solvers" --add-data "template;template" --add-data "static;static" --hidden-import=scipy.special.cython_special --hidden-import=jinja2.ext
+nircmd.exe shortcut "~$folder.nircmd$\Executable\VX.Y\COVID19-Toolkit\COVID19-Toolkit.exe" "~$folder.nircmd$\Executable\VX.Y" COVID19-Toolkit.lnk
+nircmd.exe shortcut "~$folder.nircmd$\Executable\VX.Y\COVID19-ToolkitSpreadsheets" "~$folder.nircmd$\Executable\VX.Y" Spreadsheets.lnk
+
+
+# 6) Ship the "Executable\VX.Y" directory to the users
+
+# 7) Deactivate the environment by simply running the following word in the CMD prompt
+deactivate
+# 7) You can remove the "build" directory

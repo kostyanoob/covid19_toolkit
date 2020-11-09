@@ -1,0 +1,25 @@
+{
+  "name": "covid19_toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
+    "jquery": "^3.5.1",
+    "path": "^0.12.7",
+    "popper.js": "^1.16.1",
+    "python-shell": "^2.0.1"
+  }
+}
