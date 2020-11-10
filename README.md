@@ -8,8 +8,8 @@
 You are required to create a "Solvers" directory to contain at least one solver software. We recommend downloading the free GLPK:
 http://guix.gnu.org/packages/glpk-4.65
 
-The information about your organization should be written within the spreadsheet files inside "Spreadsheets" directory. You can fill in the information that fits your organization. according to the following rules:
-1) For each date, a separate excel (XLSX) file will the describe the full state of the organization. This file must have the filename format YYYY_MM_DD_main.xlsx, and it must contain at least two sheets: "Organization" and "Risk".
+The information about your organization should be written within the spreadsheet files inside "Spreadsheets" directory. You can fill in the information that fits your organization according to the following rules:
+1) For each date, a separate excel file (.xlsx) will the describe the full state of the organization. This file must have the filename format YYYY_MM_DD_main.xlsx, and it must contain at least two sheets: "Organization" and "Risk".
 1) In the "Organization" and in the "Risk" sheets there should be an identical list of people.
 2) In the "Organization" sheet you are only obliged to the first 4 columns storing the details of the person. The rest of the columns you can add as you wish. These columns are the departments of the organization. Use binary indicator to associate each person (row) with the departments the person visits.
 3) In the "Risk" sheet you can add as many risk factors as you wish, and each person should have scores 0-5 for each one of the risk factors you defined.
