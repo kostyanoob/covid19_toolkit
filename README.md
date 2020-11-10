@@ -1,5 +1,6 @@
 # covid19_toolkit
- Optimally select people for COVID19 testing. Can be employed on an organization level subject to a daily test budget.
+ Goal: Optimally select people for COVID19 testing. If you're running an organization and you can pick only a limited number of people for a daily test, this software will select the optimal subset of people that minimizes the risk of an outbreak in your organization.
+
  
 ![Screenshot of the software](HighLevel.PNG)
  
